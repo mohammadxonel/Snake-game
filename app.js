@@ -31,3 +31,18 @@ function eatApple() {
         apple = new Apple();
     }
 }
+
+
+function checkHitWall() {
+    let headTail = snake.tail[snake.tail.length - 1]
+
+    if (headTail.x == -snake.size) {
+        headTail.x = canvas.width - snake.size
+    } else if (headTail.x == canvas.widh) {
+        headTail.x = 0
+    } else if (headTail.y == -snake.size) {
+        headTail.y = canvas.height - snake.size
+    } else if (headTail.y == canvas.height) {
+        headTail.y = 0
+    }
+}
