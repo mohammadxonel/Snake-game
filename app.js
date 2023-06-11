@@ -13,3 +13,11 @@ function show() {
     update()
     draw()
 }
+
+function update() {
+    canvasContext.clearRect(0, 0, canvas.width, canvas.height)
+    snake.move()
+    eatApple()
+    checkHitWall()
+}
+
