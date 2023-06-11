@@ -61,3 +61,27 @@ function draw() {
     canvasContext.fillText("Score: " + (snake.tail.length - 1), canvas.width - 120, 18)
     createRect(apple.x, apple.y, apple.size, apple.size, apple.color)
 }
+
+function createRect(x, y, width, height, color) {
+    canvasContext.fillStyle = color
+    canvasContext.fillRect(x, y, width, height)
+}
+
+window.addEventListener("keydown", (event) => {
+    setTimeout(() => {
+        if (event.keyCode == 37 && snake.rotateX != 1) {
+            snake.rotateX = -1
+            snake.rotateY = 0
+        } else if (event.keyCode == 38 && snake.rotateY != 1) {
+            snake.rotateX = 0
+            snake.rotateY = -1
+        } else if (event.keyCode == 39 && snake.rotateX != -1) {
+            snake.rotateX = 1
+            snake.rotateY = 0
+        } else if (event.keyCode == 40 && snake.rotateY != -1) {
+            snake.rotateX = 0
+            snake.rotateY = 1
+        }
+    }, 1)
+})
+
