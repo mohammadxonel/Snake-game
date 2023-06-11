@@ -6,7 +6,7 @@ window.onload = () => {
 }
 
 function gameLoop() {
-    setInterval(show, 1000/20) // here 15 is our fps value
+    setInterval(show, 1000 / 20) // here 15 is our fps value
 }
 
 function show() {
@@ -21,3 +21,13 @@ function update() {
     checkHitWall()
 }
 
+function eatApple() {
+    if (snake.tail[snake.tail.length - 1].x == apple.x &&
+        snake.tail[snake.tail.length - 1].y == apple.y) {
+        snake.tail[snake.tail.length] = {
+            x: apple.x,
+            y: apple.y
+        }
+        apple = new Apple();
+    }
+}
