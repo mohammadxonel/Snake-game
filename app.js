@@ -5,3 +5,7 @@ window.onload = () => {
     gameLoop()
 }
 
+function gameLoop() {
+    setInterval(show, 1000/20) // here 15 is our fps value
+}
+
