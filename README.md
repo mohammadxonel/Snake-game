@@ -1,10 +1,10 @@
 # Snake-game
 
 ### Project Live :
-https://mohammadxxali.github.io/Snake-game/
+https://mohammadxonel.github.io/Snake-game/
 
 ------
 
 ### Project Screenshot
-![](https://github.com/mohammadxxali/Snake-game/blob/main/Screenshot.png)
+![](https://github.com/mohammadxonel/Snake-game/blob/main/Screenshot.png)
 
